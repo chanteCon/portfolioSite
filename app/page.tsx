@@ -9,16 +9,16 @@ import { Suspense } from 'react';
 export default function Home() {
     return (
         <div className="mx-auto flex w-full lg:max-w-6xl">
-            <main className="flex w-full flex-col bg-background px-6 py-16 sm:px-10 lg:px-16 gap-y-10">
+            <main className="flex w-full flex-col bg-background px-6 py-10 sm:px-10 lg:px-16 gap-y-10">
                 <section className="flex  flex-col gap-12 md:flex-row items-center lg:justify-between lg:mt-10">
                     <div className="max-w-xl">
                         <p className="text-sm text-accent">HI, I&apos;M CHANTELLE</p>
 
-                        <h1 className="mt-3 text-3xl sm:text-4xl">I&apos;m a</h1>
+                        <h1 className="text-3xl sm:text-4xl">I&apos;m a</h1>
                         <div className="flex items-center gap-2">
                             <h1 className="text-3xl text-accent sm:text-4xl">Software developer</h1>
                         </div>
-                        <p className="mt-5 max-w-lg text-sm leading-6 text-muted-foreground sm:text-base">
+                        <p className="max-w-lg text-sm leading-6 text-muted-foreground sm:text-base">
                             I enjoy building apps, exploring new technologies, and learning through
                             projects.
                         </p>
@@ -94,17 +94,15 @@ export default function Home() {
                 <hr />
                 <section className="flex flex-col gap-6">
                     <div>
-                        <h3 className="text-xl text-accent">Projects</h3>
+                        <h3 className="text-xl text-accent">Code</h3>
                         <p className="mt-1 text-sm text-muted-foreground">
-                            A selection of projects that showcase my experience, interests, and the
-                            things I enjoy building.
+                            My current full-stack project, built to explore backend development,
+                            architecture, and application design.
                         </p>
                     </div>
 
-                    <div className="grid gap-5 lg:grid-cols-2">
+                    <div className="w-[85%]">
                         <PlaylistCard />
-
-                        <NightCareCard />
                     </div>
                 </section>
                 <hr />

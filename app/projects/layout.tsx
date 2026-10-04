@@ -15,7 +15,7 @@ export default function ProjectsLayout({ children }: { children: React.ReactNode
                     className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
                 >
                     <ArrowLeft className="size-4" />
-                    Back to projects
+                    View all projects
                 </Link>
             )}
 

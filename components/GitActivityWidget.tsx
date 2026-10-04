@@ -1,3 +1,5 @@
+import { GIT_URL } from '@/app/constants';
+
 type GithubEvent = {
     id: string;
     type: string;
@@ -66,13 +68,12 @@ const getActivityText = (event: GithubEvent) => {
 
 export default async function GithubActivity() {
     const events = await getGithubActivity();
-
     const activities = events
         .map((event) => ({
             repo: event.repo.name.split('/')[1],
             action: getActivityText(event),
             createdAt: event.created_at,
-            repoUrl: `https://github.com/chanteCon/${event.repo.name.split('/')[1]}`,
+            repoUrl: `${GIT_URL}${event.repo.name.split('/')[1]}`,
         }))
         .filter((activity) => activity.action)
         .slice(0, 3);
@@ -80,7 +81,11 @@ export default async function GithubActivity() {
         <div className="p-3 lg:p-5 border rounded-lg bg-card w-[285px]">
             <div className="flex items-center gap-2">
                 <span className="size-2 rounded-full bg-green-500" />
-                <h2 className="text-sm text-primary underline">Recent Git activity</h2>
+                <a href={GIT_URL} rel="noopener noreferrer" target="_blank">
+                    <h2 className="text-sm text-primary underline hover:font-semibold">
+                        Recent Git activity
+                    </h2>
+                </a>
             </div>
             <div className="flex flex-col mt-2">
                 {activities.map((activity, index) => (
