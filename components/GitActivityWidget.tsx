@@ -76,7 +76,7 @@ export default async function GithubActivity() {
             repoUrl: `${GIT_URL}${event.repo.name.split('/')[1]}`,
         }))
         .filter((activity) => activity.action)
-        .slice(0, 3);
+        .slice(0, 6);
     return (
         <div className="p-3 lg:p-5 border rounded-lg bg-card w-[285px]">
             <div className="flex items-center gap-2">

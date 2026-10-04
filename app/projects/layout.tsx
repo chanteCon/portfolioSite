@@ -8,7 +8,7 @@ export default function ProjectsLayout({ children }: { children: React.ReactNode
     const pathname = usePathname();
 
     return (
-        <div className="mx-auto w-full max-w-5xl">
+        <div className="mx-auto w-full max-w-5xl px-10 py-10">
             {pathname !== '/projects' && (
                 <Link
                     href="/projects"
