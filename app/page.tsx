@@ -1,6 +1,7 @@
 import GithubActivity from '@/components/GitActivityWidget';
 import GithubActivitySkeleton from '@/components/GitHubActivitySkeleton';
-import ProjectCard from '@/components/ProjectCard';
+import NightCareCard from '@/components/NightCareCard';
+import PlaylistCard from '@/components/PlaylistsCard';
 import StackIcon from '@/components/StackIcon';
 import Link from 'next/link';
 import { Suspense } from 'react';
@@ -101,29 +102,9 @@ export default function Home() {
                     </div>
 
                     <div className="grid gap-5 lg:grid-cols-2">
-                        <ProjectCard
-                            title="Playlist Manager"
-                            label="Live . Solo project"
-                            description="A full-stack web application for organising and managing video playlists from different platforms across the internet."
-                            technologies={[
-                                'Next.js',
-                                'TypeScript',
-                                'Express',
-                                'Prisma',
-                                'PostgreSQL',
-                                'Redis',
-                            ]}
-                            href="/projects/playlist-manager"
-                            featured
-                        />
+                        <PlaylistCard />
 
-                        <ProjectCard
-                            title="NightCare"
-                            label="Previously released · University team project"
-                            description="A thriller escape room game built in Unreal Engine 4 as a team project, focused on creating an interactive environment through puzzles, hints, and interactive objects."
-                            technologies={['Unreal Engine 4', 'Blueprints']}
-                            href="/projects/escape-room"
-                        />
+                        <NightCareCard />
                     </div>
                 </section>
                 <hr />

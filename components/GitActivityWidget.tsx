@@ -77,7 +77,7 @@ export default async function GithubActivity() {
         .filter((activity) => activity.action)
         .slice(0, 3);
     return (
-        <div className="p-3 lg:p-5 border rounded-lg bg-card lg:w-[285px]">
+        <div className="p-3 lg:p-5 border rounded-lg bg-card w-[285px]">
             <div className="flex items-center gap-2">
                 <span className="size-2 rounded-full bg-green-500" />
                 <h2 className="text-sm text-primary underline">Recent Git activity</h2>
@@ -93,7 +93,7 @@ export default async function GithubActivity() {
                             index > 0 ? 'border-t border-border/50' : ''
                         }`}
                     >
-                        <div className="flex gap-1 group-hover:text-accent lg:justify-between">
+                        <div className="flex gap-1 group-hover:text-accent justify-between">
                             <p className="text-xs">{activity.repo}</p>
                             <p className="text-xs transition-transform duration-200 group-hover:translate-x-1">
                                 →
