@@ -14,34 +14,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://chantellecs.com'),
+
     title: 'Chantelle Conlon Scoullar | Software Developer',
     description:
-        'Personal portfolio of Chantelle Conlon Scoullar, a software developer focused on full-stack development, backend development, and application architecture.',
-    keywords: [
-        'Chantelle Conlon Scoullar',
-        'software developer',
-        'full-stack developer',
-        'backend developer',
-        'Next.js',
-        'TypeScript',
-    ],
-    authors: [{ name: 'Chantelle Conlon Scoullar' }],
+        'Personal portfolio of Chantelle Conlon Scoullar, a software developer focused on full-stack and backend development.',
+
     openGraph: {
-        title: 'Chantelle Con | Software Developer',
-        description:
-            'Personal portfolio of Chantelle Conlon Scoullar, a software developer focused on full-stack development, backend development, and application architecture.',
-        url: 'https://yourdomain.com',
-        siteName: 'Chantelle Conlon Scoullar',
-        type: 'website',
-    },
-    twitter: {
-        card: 'summary_large_image',
         title: 'Chantelle Conlon Scoullar | Software Developer',
         description:
-            'Personal portfolio of Chantelle Conlon Scoullar, a software developer focused on full-stack development, backend development, and application architecture.',
+            'Personal portfolio of Chantelle Conlon Scoullar, a software developer focused on full-stack and backend development.',
+        url: 'https://chantellecs.com',
+        siteName: 'Chantelle Conlon Scoullar',
+        type: 'website',
+        images: [
+            {
+                url: '/images/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Chantelle Conlon Scoullar — Software Developer',
+            },
+        ],
     },
 };
-
 export default function RootLayout({ children }: LayoutProps<'/'>) {
     return (
         <html
