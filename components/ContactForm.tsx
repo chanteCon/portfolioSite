@@ -1,5 +1,6 @@
 'use client';
 
+import { toast } from 'sonner';
 import FormField from './FormField';
 import { Button } from './ui/button';
 import { Label } from './ui/label';
@@ -41,6 +42,8 @@ export default function ContactForm() {
             if (!response.ok) {
                 throw new Error('Failed to send message');
             }
+
+            toast('Message sent!');
 
             form.reset();
             setMessage('');
