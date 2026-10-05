@@ -82,51 +82,62 @@ export default function ContactForm() {
         return data;
     };
     return (
-        <div className="flex flex-col gap-5">
-            <h1 className="text-primary">Send me a message and I&apos;ll get back to you</h1>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <div className="flex flex-col gap-5 w-full md:ml-5">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5">
                 <FormField
                     id="name"
-                    label="name"
+                    label="Name"
                     fieldErrors={fieldErrors}
                     setFieldErrors={setFieldErrors}
                     type="text"
                 />
-                <Label htmlFor="message">Message</Label>
-                <Textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    className={
-                        fieldErrors['message']
-                            ? 'border-destructive resize-none h-[150px]'
-                            : 'resize-none h-[150px]'
-                    }
-                    placeholder="Type message here"
-                    maxLength={MESSAGE_MAX_LENGTH}
-                    onChange={(e) => {
-                        setMessage(e.target.value);
-                        setFieldErrors((current) => {
-                            const { ['message']: _, ...remaining } = current;
-                            return remaining;
-                        });
-                    }}
-                />
-                {message.length > 0 && (
-                    <p>{`Characters remaing: ${MESSAGE_MAX_LENGTH - message.length}`} </p>
-                )}
-                {fieldErrors['message'] && (
-                    <p className="text-destructive">{fieldErrors['message']}</p>
-                )}
+
                 <FormField
                     id="email"
-                    label="email"
+                    label="Email"
                     fieldErrors={fieldErrors}
                     setFieldErrors={setFieldErrors}
                     type="email"
                 />
-                <Button disabled={isSubmitting} type="submit">
-                    {isSubmitting ? 'Sending' : 'Send message'}
+
+                <div className="flex flex-col gap-2">
+                    <Label htmlFor="message">Message</Label>
+
+                    <Textarea
+                        id="message"
+                        name="message"
+                        rows={6}
+                        className={
+                            fieldErrors.message
+                                ? 'h-[150px] resize-none border-destructive'
+                                : 'h-[150px] resize-none'
+                        }
+                        placeholder="Enter message here..."
+                        maxLength={MESSAGE_MAX_LENGTH}
+                        onChange={(e) => {
+                            setMessage(e.target.value);
+                            setFieldErrors((current) => {
+                                const { message: _, ...remaining } = current;
+                                return remaining;
+                            });
+                        }}
+                    />
+
+                    <div className="flex justify-between text-xs text-muted-foreground">
+                        {fieldErrors.message ? (
+                            <p className="text-destructive">{fieldErrors.message}</p>
+                        ) : (
+                            <span />
+                        )}
+
+                        {message.length > 0 && (
+                            <p>{MESSAGE_MAX_LENGTH - message.length} characters remaining</p>
+                        )}
+                    </div>
+                </div>
+
+                <Button disabled={isSubmitting} type="submit" className="mt-2 w-full max-w-[150px]">
+                    {isSubmitting ? 'Sending...' : 'Send message'}
                 </Button>
             </form>
         </div>
