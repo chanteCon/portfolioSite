@@ -1,6 +1,7 @@
 import { GitGraphIcon, Mail, Phone, UserPlus } from 'lucide-react';
-
 import { GIT_URL, LINKEDIN_URL } from '../constants';
+import ContactLink from '@/components/ContactLink';
+import ContactForm from '@/components/ContactForm';
 
 export default function ContactPage() {
     return (
@@ -14,47 +15,22 @@ export default function ContactPage() {
                     If you want to get in touch feel free to send me a message.
                 </p>
             </section>
-
             <section className="flex flex-col gap-4">
                 <h2 className="text-lg text-primary">Details</h2>
 
                 <div className="flex flex-col gap-4 text-sm text-muted-foreground">
-                    <a
+                    <ContactLink
                         href="mailto:chantelle.cs@outlook.com"
-                        className="flex w-fit items-center gap-3 transition-colors hover:text-primary"
-                    >
-                        <Mail className="size-4" />
-                        chantelle.cs@outlook.com
-                    </a>
-
-                    <a
-                        href="tel:+61413122769"
-                        className="flex w-fit items-center gap-3 transition-colors hover:text-primary"
-                    >
-                        <Phone className="size-4" />
-                        0413 122 769
-                    </a>
-
-                    <a
-                        href={GIT_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex w-fit items-center gap-3 transition-colors hover:text-primary"
-                    >
-                        <GitGraphIcon className="size-4" />
-                        GitHub
-                    </a>
-
-                    <a
-                        href={LINKEDIN_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex w-fit items-center gap-3 transition-colors hover:text-primary"
-                    >
-                        <UserPlus className="size-4" />
-                        LinkedIn
-                    </a>
+                        Icon={Mail}
+                        text="chantelle.cs@outlook.com"
+                    />
+                    <ContactLink href="tel:+61413122769" Icon={Phone} text=" 0413 122 769" />
+                    <ContactLink href={GIT_URL} Icon={GitGraphIcon} text="GitHub" />
+                    <ContactLink href={LINKEDIN_URL} Icon={UserPlus} text="LinkedIn" />
                 </div>
+            </section>
+            <section>
+                <ContactForm />
             </section>
         </main>
     );
