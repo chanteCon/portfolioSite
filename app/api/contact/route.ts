@@ -6,9 +6,7 @@ export async function POST(request: Request) {
     const credentials = Buffer.from(`${process.env.EMAIL_USER}:${process.env.EMAIL_PASS}`).toString(
         'base64',
     );
-    console.log('Sending to: ' + email);
-    console.log('Sending auto to: ' + process.env.EMAIL_TO);
-    console.log('Sending from ' + process.env.EMAIL_FROM);
+
     const response = await fetch('https://api.mailjet.com/v3.1/send', {
         method: 'POST',
         headers: {
