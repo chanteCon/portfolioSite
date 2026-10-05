@@ -1,6 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
-import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'About',
+    description:
+        'Learn more about Chantelle Conlon Scoullar, a software developer focused on full-stack development.',
+};
 
 export default function About() {
     return (

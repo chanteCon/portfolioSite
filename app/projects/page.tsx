@@ -1,5 +1,12 @@
 import NightCareCard from '@/components/NightCareCard';
 import PlaylistCard from '@/components/PlaylistsCard';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Projects',
+    description:
+        'See projects by Chantelle Conlon Scoullar, a software developer focused on full-stack development.',
+};
 
 export default function Projects() {
     return (

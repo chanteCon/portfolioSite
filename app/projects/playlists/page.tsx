@@ -4,6 +4,13 @@ import { ArrowUpRight, Check, Database, GitBranch, Hammer, Loader, Server } from
 import { PLAYLISTS_API_URL, PLAYLISTS_URL } from '@/app/constants';
 import { BrowserFrame } from '@/components/BrowserFrame';
 import { FeatureCard } from '@/components/FeatureCard';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Playlists',
+    description:
+        'Full-stack cross platform video playlist management application built with Next.js, TypeScript, Express, Prisma, PostgreSQL, and Redis.',
+};
 
 const technologies = [
     'Next.js',
@@ -39,7 +46,7 @@ const upcomingFeatures = ['Rich text editor for video notes', 'Instagram support
 
 export default function PlaylistManagerPage() {
     return (
-        <div className="flex flex-col gap-12 sm:gap-16">
+        <div className="relative flex flex-col gap-12 sm:gap-16">
             <section>
                 <p className="text-sm text-accent">FEATURED PROJECT</p>
 
@@ -102,7 +109,7 @@ export default function PlaylistManagerPage() {
             </section>
 
             <section className="max-w-3xl">
-                <h2 className="text-2xl text-primary">Overview</h2>
+                <h2 className="sticky text-2xl text-primary">Overview</h2>
 
                 <div className="mt-5 space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
                     <p>

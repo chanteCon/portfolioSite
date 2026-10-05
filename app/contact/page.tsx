@@ -2,6 +2,12 @@ import { GitGraphIcon, Mail, Phone, UserPlus } from 'lucide-react';
 import { GIT_URL, LINKEDIN_URL } from '../constants';
 import ContactLink from '@/components/ContactLink';
 import ContactForm from '@/components/ContactForm';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Contact',
+    description: 'Contact Chantelle Conlon Scoullar about software development.',
+};
 
 export default function ContactPage() {
     return (
