@@ -1,8 +1,29 @@
+import { Button } from '@/components/ui/button';
+import { Download } from 'lucide-react';
+import Link from 'next/link';
+
 export default function About() {
     return (
         <div className="mx-auto w-full max-w-5xl px-6 py-16 sm:px-10 lg:px-16 flex flex-col gap-5">
             <header className="flex flex-col">
-                <h1 className="mt-2 text-3xl sm:text-4xl">About me</h1>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <h1 className="text-3xl sm:text-4xl">About me</h1>
+
+                    <Button
+                        className="group w-[100px] gap-1 border-primary text-primary transition-transform hover:scale-105"
+                        variant="outline"
+                    >
+                        <a
+                            href="/chantelleConlonScoullarResume_1026.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-1"
+                        >
+                            Resume
+                            <Download className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                        </a>
+                    </Button>
+                </div>
 
                 <p className="mt-5 text-sm leading-7 text-muted-foreground sm:text-base">
                     I&apos;m a software developer who enjoys building things and learning through
@@ -32,6 +53,7 @@ export default function About() {
                             <h3 className="mt-1 text-base font-medium">
                                 Graduate Certificate in Cybersecurity (UOW)
                             </h3>
+
                             <p className="mt-1 text-sm text-muted-foreground">
                                 Completed - High Disctinction
                             </p>

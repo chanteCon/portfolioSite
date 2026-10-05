@@ -101,7 +101,7 @@ export default async function GithubActivity() {
                         <div className="flex gap-1 group-hover:text-accent justify-between">
                             <p className="text-xs">{activity.repo}</p>
                             <p className="text-xs transition-transform duration-200 group-hover:translate-x-1">
-                                →
+                                -&gt;
                             </p>
                         </div>
 

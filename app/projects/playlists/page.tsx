@@ -43,7 +43,7 @@ export default function PlaylistManagerPage() {
             <section>
                 <p className="text-sm text-accent">FEATURED PROJECT</p>
 
-                <h1 className="mt-3 text-4xl text-primary sm:text-5xl">Playlist Manager</h1>
+                <h1 className="mt-3 text-4xl text-primary sm:text-5xl">Playlists</h1>
 
                 <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
                     A full-stack web application for organising and managing video playlists from
@@ -96,7 +96,7 @@ export default function PlaylistManagerPage() {
             <section>
                 <BrowserFrame
                     src="/images/playlists-screenshot.png"
-                    alt="Playlist Manager dashboard"
+                    alt="Playlists dashboard"
                     aspectRatio="aspect-[2926/1586]"
                 />
             </section>
@@ -249,14 +249,14 @@ export default function PlaylistManagerPage() {
                 <div className="mt-6 flex flex-col items-center gap-6 lg:flex-row lg:items-center lg:justify-center">
                     <BrowserFrame
                         src="/images/mobile-screenshot.png"
-                        alt="Playlist Manager mobile interface"
+                        alt="Playlists mobile interface"
                         aspectRatio="aspect-[772/1464]"
                         className="max-w-[250px] lg:max-w-[280px]"
                     />
 
                     <BrowserFrame
                         src="/images/screenshot-desktop.png"
-                        alt="Playlist Manager desktop interface"
+                        alt="Playlists desktop interface"
                         aspectRatio="aspect-[2930/1588]"
                         className="max-w-[750px] flex-1"
                     />
@@ -389,7 +389,7 @@ export default function PlaylistManagerPage() {
                         rel="noopener noreferrer"
                         className="text-primary transition-colors hover:text-accent"
                     >
-                        View live project →
+                        View live project -&gt;
                     </Link>
 
                     <Link
@@ -398,7 +398,7 @@ export default function PlaylistManagerPage() {
                         rel="noopener noreferrer"
                         className="text-primary transition-colors hover:text-accent"
                     >
-                        View backend on GitHub →
+                        View backend on GitHub -&gt;
                     </Link>
 
                     <Link
@@ -407,7 +407,7 @@ export default function PlaylistManagerPage() {
                         rel="noopener noreferrer"
                         className="text-primary transition-colors hover:text-accent"
                     >
-                        View frontend on GitHub →
+                        View frontend on GitHub -&gt;
                     </Link>
                 </div>
             </section>

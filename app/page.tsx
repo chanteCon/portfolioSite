@@ -23,6 +23,12 @@ export default function Home() {
                                 I enjoy building apps, exploring new technologies, and learning
                                 through projects.
                             </p>
+                            <Link
+                                href="/about"
+                                className="mt-4 inline-block text-sm text-primary hover:underline"
+                            >
+                                More info -&gt;
+                            </Link>
                         </div>
 
                         <div className="flex flex-col gap-5">
@@ -109,6 +115,12 @@ export default function Home() {
                         <PlaylistCard />
                     </div>
                 </section>
+                <Link
+                    href="/projects"
+                    className="mt-4 inline-block text-sm text-primary hover:underline"
+                >
+                    See all projects -&gt;
+                </Link>
 
                 <hr />
 
@@ -124,7 +136,7 @@ export default function Home() {
                             href="/contact"
                             className="mt-4 inline-block text-sm text-primary hover:underline"
                         >
-                            Contact me →
+                            Contact me -&gt;
                         </Link>
                     </div>
                 </section>
