@@ -28,7 +28,7 @@ export default function About() {
                         </div>
                         <div className="relative pb-10 pl-8">
                             <span className="absolute -left-[5px] top-1 size-2.5 rounded-full bg-primary" />
-                            <p className="text-xs text-muted-foreground">2024</p>
+                            <p className="text-xs text-muted-foreground">2025</p>
                             <h3 className="mt-1 text-base font-medium">
                                 Graduate Certificate in Cybersecurity (UOW)
                             </h3>
