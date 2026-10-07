@@ -76,10 +76,6 @@ export async function POST(request: Request) {
     });
 
     if (!response.ok) {
-        const error = await response.text();
-
-        console.error('Mailjet error:', response.status, error);
-
         return NextResponse.json(
             { success: false, message: 'Failed to send message' },
             { status: 500 },
