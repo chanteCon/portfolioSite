@@ -2,7 +2,8 @@
 
 My personal developer portfolio, built with Next.js and TypeScript.
 
-The site showcases my projects, technologies, GitHub activity, and ways to get in touch.
+## Access
+Live site: https://www.chantellecs.com
 
 ## Tech Stack
 
