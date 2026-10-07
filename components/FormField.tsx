@@ -1,19 +1,22 @@
 import { Dispatch, SetStateAction } from 'react';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
-type Field = 'name' | 'email' | 'message';
+import { cn } from '@/lib/utils';
+type Field = 'name' | 'email' | 'message' | 'company';
 export default function FormField({
     id,
     label,
     fieldErrors,
     setFieldErrors,
     type,
+    className,
 }: {
     id: Field;
     label: string;
     fieldErrors: Partial<Record<Field, string>>;
     setFieldErrors: Dispatch<SetStateAction<Partial<Record<Field, string>>>>;
     type: string;
+    className?: string;
 }) {
     const fieldError = fieldErrors[id];
     return (
@@ -22,7 +25,7 @@ export default function FormField({
             <Input
                 id={id}
                 name={id}
-                className={fieldError ? 'border-destructive' : ''}
+                className={cn(className, fieldError ? 'border-destructive' : '')}
                 onChange={() =>
                     setFieldErrors((current) => {
                         const { [id]: _, ...remaining } = current;

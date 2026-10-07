@@ -1,7 +1,45 @@
+import { ApiError } from 'next/dist/server/api-utils';
 import { NextResponse } from 'next/server';
-
+import { z } from 'zod';
 export async function POST(request: Request) {
-    const { name, email, message } = await request.json();
+    const contactSchema = z.object({
+        name: z.string().min(1).max(50),
+        email: z.email(),
+        message: z.string().min(1).max(250),
+        turnstileToken: z.string().min(1),
+        company: z.string().optional(),
+    });
+
+    const result = contactSchema.safeParse(await request.json());
+
+    if (!result.success) {
+        throw new ApiError(400, 'Invalid input');
+    }
+
+    const { name, email, message, company, turnstileToken } = result.data;
+    if (company) {
+        return Response.json({ success: true });
+    }
+
+    const turnstileResponse = await fetch(
+        'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                secret: process.env.TURNSTILE_SECRET_KEY!,
+                response: turnstileToken,
+            }),
+        },
+    );
+
+    const turnstileResult = await turnstileResponse.json();
+
+    if (!turnstileResult.success) {
+        return NextResponse.json({ success: true });
+    }
 
     const credentials = Buffer.from(`${process.env.EMAIL_USER}:${process.env.EMAIL_PASS}`).toString(
         'base64',
@@ -36,20 +74,6 @@ export async function POST(request: Request) {
 
                     Message:
                     ${message}`,
-                },
-                {
-                    From: {
-                        Email: process.env.EMAIL_FROM,
-                        Name: 'Chantelle',
-                    },
-                    To: [
-                        {
-                            Email: email,
-                            Name: name,
-                        },
-                    ],
-                    Subject: 'Thanks for reaching out!',
-                    TextPart: `Hello ${name.charAt(0).toUpperCase() + name.slice(1)},\nThank you for reaching out :).\nI have received your message and will get back to you as quickly as possible.\nFrom,\nChantelle`,
                 },
             ],
         }),
