@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://chantellecs.com'),
+    metadataBase: new URL('https://www.chantellecs.com'),
 
     title: 'Chantelle Conlon Scoullar | Software Developer',
     description:
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         title: 'Chantelle Conlon Scoullar | Software Developer',
         description:
             'Personal portfolio of Chantelle Conlon Scoullar, a software developer focused on full-stack and backend development.',
-        url: 'https://chantellecs.com',
+        url: 'https://www.chantellecs.com',
         siteName: 'Chantelle Conlon Scoullar',
         type: 'website',
         images: [

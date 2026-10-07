@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://chantellecs.com/sitemap.xml',
+        sitemap: 'https://www.chantellecs.com/sitemap.xml',
     };
 }

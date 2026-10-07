@@ -6,6 +6,9 @@ export const metadata: Metadata = {
     title: 'About',
     description:
         'Learn more about Chantelle Conlon Scoullar, a software developer focused on full-stack development.',
+    alternates: {
+        canonical: '/about',
+    },
 };
 
 export default function About() {
