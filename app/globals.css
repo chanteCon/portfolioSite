@@ -152,10 +152,12 @@
     --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-body {
+body,
+body * {
     transition:
-        background-color 200ms ease,
-        color 200ms ease;
+        background-color 0.7s ease,
+        color 0.7s ease,
+        border-color 0.7s ease;
 }
 
 @layer base {
