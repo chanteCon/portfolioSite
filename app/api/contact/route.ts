@@ -69,11 +69,7 @@ export async function POST(request: Request) {
                         Name: name,
                     },
                     Subject: `New portfolio message from ${name}`,
-                    TextPart: `Name: ${name}
-                    Email: ${email}
-
-                    Message:
-                    ${message}`,
+                    HTMLPart: `<p>${name} has reached out.</p><p><em>"${message}"</em></p>`,
                 },
             ],
         }),

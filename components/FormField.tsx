@@ -10,6 +10,8 @@ export default function FormField({
     setFieldErrors,
     type,
     className,
+    placeholder,
+    hideLabel,
 }: {
     id: Field;
     label: string;
@@ -17,11 +19,15 @@ export default function FormField({
     setFieldErrors: Dispatch<SetStateAction<Partial<Record<Field, string>>>>;
     type: string;
     className?: string;
+    placeholder?: string;
+    hideLabel?: boolean;
 }) {
     const fieldError = fieldErrors[id];
     return (
         <div className="flex flex-col gap-2">
-            <Label htmlFor={id}>{label.charAt(0).toUpperCase() + label.slice(1)}</Label>
+            <Label htmlFor={id} className={hideLabel ? 'hidden' : 'block'}>
+                {label.charAt(0).toUpperCase() + label.slice(1)}
+            </Label>
             <Input
                 id={id}
                 name={id}
@@ -33,6 +39,7 @@ export default function FormField({
                     })
                 }
                 type={type}
+                placeholder={placeholder}
             />
             {fieldError && <p className="text-destructive">{fieldError}</p>}
         </div>

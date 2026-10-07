@@ -152,6 +152,12 @@
     --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+body {
+    transition:
+        background-color 200ms ease,
+        color 200ms ease;
+}
+
 @layer base {
     * {
         @apply border-border outline-ring/50;

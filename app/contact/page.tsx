@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <main className="mx-auto flex w-full max-w-5xl gap-y-10 flex-col md:flex-row px-6 py-16 md:px-10 lg:px-16 items:center">
+        <main className="mx-auto flex w-full max-w-5xl gap-y-10 flex-col md:flex-row px-6 py-10 md:px-10 lg:px-16 items:center">
             <section className="w-full md:mt-15 md:text-left flex flex-col items-center md:items-start">
                 <p className="text-md text-accent  w-full max-w-100">GET IN TOUCH</p>
 
@@ -36,7 +36,7 @@ export default function ContactPage() {
                 <p className="text-primary text-lg block md:hidden text-start w-full max-w-100">
                     Send me a message
                 </p>
-                <ContactForm className="md:mt-20" />
+                <ContactForm className="md:mt-25" />
             </section>
         </main>
     );

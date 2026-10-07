@@ -102,19 +102,25 @@ export default function ContactForm({ className }: { className?: string }) {
                     <FormField
                         id="name"
                         label="Name"
+                        hideLabel
                         fieldErrors={fieldErrors}
                         setFieldErrors={setFieldErrors}
                         type="text"
+                        placeholder="Enter name"
                     />
                     <FormField
                         id="email"
                         label="Email"
+                        hideLabel
                         fieldErrors={fieldErrors}
                         setFieldErrors={setFieldErrors}
                         type="email"
+                        placeholder="Enter email"
                     />
                     <div className="flex flex-col gap-2">
-                        <Label htmlFor="message">Message</Label>
+                        <Label className="hidden" htmlFor="message">
+                            Message
+                        </Label>
                         <Textarea
                             id="message"
                             name="message"
