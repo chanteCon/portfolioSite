@@ -4,7 +4,17 @@ import PlaylistCard from '@/components/PlaylistsCard';
 import StackIcon from '@/components/StackIcon';
 
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { Suspense } from 'react';
+
+export const metadata: Metadata = {
+    title: 'Chantelle Conlon Scoullar | Software Developer',
+    description:
+        'Personal portfolio of Chantelle Conlon Scoullar, a software developer focused on full-stack and backend development.',
+    alternates: {
+        canonical: '/',
+    },
+};
 
 export default function Home() {
     return (
