@@ -30,8 +30,8 @@ export default function Home() {
                             <h1 className="text-3xl text-accent sm:text-4xl">Software developer</h1>
 
                             <p className="mt-3 max-w-lg text-sm leading-6 text-muted-foreground sm:text-base">
-                                I enjoy building apps, exploring new technologies, and learning
-                                through projects.
+                                I enjoy exploring new technologies, and learning through building
+                                projects.
                             </p>
                             <Link
                                 href="/about"
@@ -116,8 +116,8 @@ export default function Home() {
                         <h3 className="text-xl text-accent">Featured project</h3>
 
                         <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
-                            My current full-stack project, built to explore backend development,
-                            architecture, and application design.
+                            My current full-stack project exploring API design, backend architecture
+                            and authentication.
                         </p>
                     </div>
 

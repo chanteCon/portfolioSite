@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 import { Metadata } from 'next';
 
@@ -17,28 +16,22 @@ export default function About() {
             <header className="flex flex-col">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <h1 className="text-3xl sm:text-4xl">About me</h1>
-
-                    <Button
-                        className="group w-[100px] gap-1 border-primary text-primary transition-transform hover:scale-105"
-                        variant="outline"
+                    <a
+                        href="/chantelleConlonScoullarResume_1026.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex w-[110px] items-center justify-center gap-1 rounded-md border border-primary bg-background px-4 py-2 text-sm font-medium text-primary transition-transform hover:scale-105 hover:bg-primary hover:text-white"
                     >
-                        <a
-                            href="/chantelleConlonScoullarResume_1026.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1"
-                        >
-                            Resume
-                            <Download className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
-                        </a>
-                    </Button>
+                        Resume
+                        <Download className="size-4 transition-transform duration-300 group-hover:translate-y-0.5" />
+                    </a>
                 </div>
 
                 <p className="mt-5 text-sm leading-7 text-muted-foreground sm:text-base">
-                    I&apos;m a software developer who enjoys building things and learning through
-                    projects. I work across the full stack, with a focus on backend development and
-                    architecture. I&apos;m interested in cybersecurity and am currently completing a
-                    Master of Information Technology, where I&apos;m specialising in cybersecurity.
+                    I&apos;m a software developer who works across the full stack, with a focus on
+                    backend development and architecture. I&apos;m interested in cybersecurity and
+                    am currently completing a Master of Information Technology, where I&apos;m
+                    specialising in cybersecurity.
                 </p>
             </header>
 
