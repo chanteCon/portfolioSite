@@ -22,7 +22,7 @@ export default function Navbar() {
     );
 
     if (!mounted) {
-        return null;
+        <nav className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur"></nav>;
     }
     return (
         <nav className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur">

@@ -68,7 +68,10 @@ const getActivityText = (event: GithubEvent) => {
 
 export default async function GithubActivity() {
     const events = await getGithubActivity();
-    const activities = events
+    const sortedEvents = [...events].sort(
+        (a, b) => Date.parse(b.created_at) - Date.parse(a.created_at),
+    );
+    const activities = sortedEvents
         .map((event) => ({
             repo: event.repo.name.split('/')[1],
             action: getActivityText(event),
