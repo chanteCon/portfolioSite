@@ -28,10 +28,20 @@ export default function About() {
                 </div>
 
                 <p className="mt-5 text-sm leading-7 text-muted-foreground sm:text-base">
-                    I&apos;m a software developer who works across the full stack, with a focus on
-                    backend development and architecture. I&apos;m interested in cybersecurity and
-                    am currently completing a Master of Information Technology, where I&apos;m
-                    specialising in cybersecurity.
+                    I&apos;m a software developer who works across the full stack, with a particular
+                    focus on backend development. My technical interests include cybersecurity,
+                    system design, and building reliable, maintainable applications.
+                    <br />
+                    <br />
+                    I hold a Bachelor&apos;s degree in Computer Science and a Graduate Certificate
+                    in Cybersecurity. I am currently completing a Master of Information Technology,
+                    majoring in Computer Science. I continue to build on this academic foundation
+                    through practical, project-based application and hands-on software development.
+                    <br />
+                    <br />
+                    Beyond my formal studies, I maintain an active interest in software engineering
+                    through independent development, exploring new frameworks and technologies, and
+                    working on projects that broaden my technical experience.
                 </p>
             </header>
 
